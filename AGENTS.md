@@ -2,24 +2,24 @@
 
 ## Project Structure & Module Organization
 
-This repository contains a static web MVP and project references for Partiu Aula, a student carpooling app. `index.html` defines the screens, `styles.css` contains responsive and accessible presentation styles, and `app.js` implements navigation and demo interactions. `docs/requirements.md` is the source of truth for project goals, user scenarios, and functional requirements; prototype screenshots belong in `docs/`.
+This workspace currently contains project reference material only. `Docs/requirements (1).md` describes the Partiu Aula student ride-sharing app, its requirements, and usability goals. `Docs/1.png` through `Docs/4.png` are visual references. There is no application source code, test suite, or asset pipeline in the current tree. If implementation is added, keep production code and tests in clearly named directories (for example, `src/` and `tests/`) and keep design references in `Docs/`.
 
 ## Build, Test, and Development Commands
 
-The MVP has no build step or package dependencies. Open `index.html` in a modern browser to use it locally. For a local HTTP server, run `python -m http.server 8000` from the repository root, then visit `http://localhost:8000`. User-created offers and reservation requests are stored in browser `localStorage` for this demonstration.
+No build, test, or local-run commands are defined in this workspace. When adding an application, document its actual setup and commands here and in the relevant project README; do not commit commands that have not been verified for the chosen toolchain.
 
-## Documentation & Asset Conventions
+## Coding Style & Naming Conventions
 
-Write documentation in Markdown with descriptive headings, short paragraphs, and tables for structured requirements. Keep requirement IDs stable (for example, `RF01`) when editing `docs/requirements.md`, and update related scenarios or acceptance criteria when behavior changes. Use clear, descriptive filenames for new assets, such as `prototype-home.png`; avoid timestamp-only names when adding new material. Keep screenshots and prototype exports in `docs/` and link to them with relative paths.
+No language or formatter is established yet. Follow the conventions of the framework selected for implementation, use consistent formatting, and choose descriptive names that reflect the ride-sharing domain (for example, `RideOffer` and `bookingStatus`). Keep user-facing messages clear and provide actionable validation feedback, as required by the project brief.
 
 ## Testing Guidelines
 
-There is no automated test framework or coverage target at present. When changing the MVP, manually check the main navigation, search and sorting, ride details and reservation, offer validation and publishing, mobile layout, and keyboard focus. For documentation changes, check Markdown links, requirement references, and asset paths. Add a test framework only when the project adopts one, and document its command here.
+There is no test framework or coverage requirement yet. Add tests alongside new functionality using the chosen framework's standard naming pattern, and document how contributors can run them. Prioritize core flows from the requirements: account access, ride search and offers, reservation status, messaging, and post-trip ratings.
 
 ## Commit & Pull Request Guidelines
 
-Git history is not available in this workspace, so no existing commit message convention can be confirmed. Use concise imperative commit subjects that describe one change (for example, `Document ride request flow`). Pull requests should explain the user-facing or documentation change, list affected requirements or files, link related work when available, and include screenshots for visual updates. Note any checks performed and any follow-up work.
+Git history is not available in this workspace, so no established commit convention can be confirmed. Use short, imperative commit subjects (for example, `Add ride search screen`). Pull requests should explain the user-facing change, list relevant checks, link related work when applicable, and include screenshots for interface changes.
 
-## Scope & Configuration
+## Security & Configuration
 
-The requirements document intentionally leaves implementation technology and integrations undecided. Confirm proposed technical decisions against the product requirements and record them in the repository before relying on them. Do not commit credentials, personal data, or local environment files.
+Do not commit credentials, private user information, or production secrets. Keep local configuration in ignored environment files and provide a sanitized example if implementation requires configuration.
